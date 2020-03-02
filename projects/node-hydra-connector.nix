@@ -1,4 +1,4 @@
-{ hydraLib, ... }: {
+{ hydraLib, ... }: with hydraLib; {
   node-hydra-connector-master = {
     description = "Node Hydra connector master";
     nixexprinput = "node_hydra_connector";

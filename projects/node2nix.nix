@@ -1,4 +1,4 @@
-{ hydraLib, ... }: {
+{ hydraLib, ... }: with hydraLib; {
   master = {
     description = "node2nix master";
     nixexprinput = "node2nix";
