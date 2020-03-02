@@ -1,7 +1,7 @@
 { projectName, ... }: let
   # Helper functions
   hydraLib = rec {
-    inherit cfg;
+    cfg = import ./config.nix;
   };
 
   jobsets = import (./projects + "/${projectName}.nix") { inherit hydraLib; };
