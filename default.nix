@@ -4,7 +4,7 @@
     cfg = import ./config.nix;
 
     mkInput = { type, value, emailresponsible ? false }: { inherit type value emailresponsible; };
-    mkNixpkgsChannel = version: mkInput { type = "git"; value = "https://github.com/nixos/nixpkgs-channels.git nixpkgs-${version}"; };
+    mkNixpkgsChannel = version: mkInput { type = "git"; value = "https://github.com/nixos/nixpkgs.git release-${version}"; };
   };
 
   jobsets = import (./projects + "/${projectName}.nix") { inherit hydraLib; };
