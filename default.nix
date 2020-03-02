@@ -2,6 +2,9 @@
   # Helper functions
   hydraLib = rec {
     cfg = import ./config.nix;
+
+    mkInput = { type, value, emailresponsible ? false }: { inherit type value emailresponsible; };
+    mkNixpkgsChannel = version: mkInput { type = "git"; value = "https://github.com/nixos/nixpkgs-channels.git nixpkgs-${version}"; };
   };
 
   jobsets = import (./projects + "/${projectName}.nix") { inherit hydraLib; };
