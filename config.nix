@@ -6,7 +6,6 @@
   defaultJobset = {
     enabled = 1;
     type = 0;
-    description = "";
     nixexprpath = "release.nix";
     hidden = false;
     description = "";
